@@ -68,9 +68,13 @@ dkms.conf
 build
 
 # vscode files
-.vscode
+*.vscode
 
 # clion files
-.idea
+*.idea
 
-.html
+# html files
+*.html
+
+# pdf files
+*.pdf
