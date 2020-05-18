@@ -1,1 +1,3 @@
-void my_graphics_Test();
+
+//test graphics.h
+int my_graphics_Test();
