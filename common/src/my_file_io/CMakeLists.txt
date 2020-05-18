@@ -1,0 +1,1 @@
+add_library(my_file_io SHARED my_file_io.c)
