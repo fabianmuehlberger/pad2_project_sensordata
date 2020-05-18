@@ -2,7 +2,7 @@
 
 ### Gruppe:
 ### Ansprechpartner:
-### Github repo: 
+### Github repo: https://github.com/fabianmuehlberger/pad2_project
 
 ## Projektteilnehmer:
 
@@ -25,6 +25,8 @@ Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Da
 ## Milestones
 
 * **Daten lesen:** Daten einlesen, aufbereiten und speichern
+    * plausibiliätsprüfung 
+    * Fehlerbehandlung / Bereinigung
 * **Terminal Menü:** Simples Terminal Menü um einen Datenpunkt per Konsole auszugeben
 * **Analyse:** Analyse der Daten. Datenpunkte über einen zeitraum zusammenführen und    vergleichen,
     * Erstellung eines Bewegungsprofils.
