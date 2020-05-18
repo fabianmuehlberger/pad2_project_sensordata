@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/muehl/Desktop/code/PAD2_Project/build"
+			"value" : "c:/Users/muehl/Desktop/code/pad2_project/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -1311,7 +1311,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/muehl/Desktop/code/PAD2_Project/build"
+			"value" : "C:/Users/muehl/Desktop/code/pad2_project/build"
 		},
 		{
 			"name" : "generic_list_SOURCE_DIR",
@@ -1323,7 +1323,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/muehl/Desktop/code/PAD2_Project"
+			"value" : "C:/Users/muehl/Desktop/code/pad2_project"
 		},
 		{
 			"name" : "list_LIB_DEPENDS",

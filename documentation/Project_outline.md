@@ -1,5 +1,9 @@
 # Themenkreis 1: Auswertung von Sensor-Rohdaten.
 
+### Gruppe:
+### Ansprechpartner:
+### Github repo: 
+
 ## Projektteilnehmer:
 
 * Lucas Schmirl
@@ -14,6 +18,22 @@ LSM9DS1 - iNEMO inertial module:
 * 3D accelerometer,
 * 3D gyroscope, 
 * 3D magnetometer
+
+## Project Ziel
+Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Datei liest und diese daten auswertet. Es soll mithilfe der Daten ein Bewegungsprofil erstellt werden. Die daten sollen per Konsolen befehl ausgegeben werden können und auch visualisiert werden. 
+
+## Milestones
+
+* **Daten lesen:** Daten einlesen, aufbereiten und speichern
+* **Terminal Menü:** Simples Terminal Menü um einen Datenpunkt per Konsole auszugeben
+* **Analyse:** Analyse der Daten. Datenpunkte über einen zeitraum zusammenführen und    vergleichen,
+    * Erstellung eines Bewegungsprofils.
+    * erstellung eines Weg-Zeit Diagramms
+    * Beschleunigungs-Zeit Diagramms
+* **(Stretch goal)** *muss erst auf machbarkeit geprüft werden* :Visualisierung der daten mithilfe von 
+    * graphics.h  oder
+    * OpenGL
+    
 
 ## Projektmanagement:
 
@@ -34,7 +54,6 @@ Um ein Kompilieren der source Files zu erleichtern und plattformübergreifend ar
 Die Projektstruktur beinhaltet sowohl alle CMake Daten, Projekt-Ressourcen, Dokumentation als auch zusätzliche Libraries die vom Team erstellt werden.
 
 ## Funktionsweise:
-Angedacht ist eine Test Applikation, welche Beschleunigung- und Magnetometer Daten an ein Visualisierungsprogramm übermittelt und grafisch aufbereitet. Dies ist jedoch nur als stretch Goal gedacht falls es die zeitlichen Ressourcen ermöglichen.
 
 Das Programm liest die Sensordaten des LSM9DS1 und speichert diese in einer Struktur.
 
@@ -43,6 +62,8 @@ Es soll aus den Gyroskop-, Beschleunigungs- und Magnetometer-daten ein Bewegungs
 Falls die Daten eine entsprechende Auswertung zulassen, soll ein Weg-Zeit Profil der Daten erstellt werden.
 
 Ausgewählt werden die Funktionen über ein simples Konsolen Menü.
+
+Angedacht ist eine Test Applikation, welche Beschleunigung- und Magnetometer Daten an ein Visualisierungsprogramm übermittelt und grafisch aufbereitet. Dies ist jedoch nur als stretch Goal gedacht falls es die zeitlichen Ressourcen ermöglichen.
 
 ## Tests:
 Die Daten werden durch Hilfs Funktionen auf Plausibilität geprüft, um eventuelle “Ausreißer” zu erkennen.
@@ -54,16 +75,6 @@ Falls möglich soll auch eine manuelle Überprüfung der Daten stattfinden. Dies
  
 ## Dokumentation 
 Die Dokumentation wird mithilfe eines simplen markdown Files (.md) erzeugt. Geplant ist eine Beschreibung der wesentlichen Funktionen in der Dokumentation um einen Überbick über Programm und Funktionen zu bieten.  Grundsätzlich wird die Beschreibung der Funktionen in den Funktionsprotoypen stattfinden.
-
-## File Struktur
-
-|Order |Inhalt  |
-|--|--|
-|/.build	|von CMake gebuildeten Projektdatein  |
-|/dist 		|fertige execute Files | 
-|/doc 		|Dokumentation |
-|/recources |Rohdaten  
-|/src		|source Files, Libraries
 
 
 
