@@ -1,0 +1,212 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "common",
+					"childIndexes" : 
+					[
+						2,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "common"
+				},
+				{
+					"build" : "common/src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "common/src"
+				},
+				{
+					"build" : "common/src/list",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "common/src/list",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "common/src/person",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "common/src/person",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "common/src/my_file_io",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "common/src/my_file_io",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "common/src/my_graphics",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "common/src/my_graphics",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "common/demo",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "common/demo",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "generic_list",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "doc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doc-Debug-ebd01a172147b032015a.json",
+					"name" : "doc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "list::@61058dbf531f1fc1b8d7",
+					"jsonFile" : "target-list-Debug-e9a969c0fdc2b5cef51d.json",
+					"name" : "list",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "my_file_io::@60f3488c5b433a92771a",
+					"jsonFile" : "target-my_file_io-Debug-538833a1b584e76f8caa.json",
+					"name" : "my_file_io",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "my_graphics::@a63da59ecd5c010245f8",
+					"jsonFile" : "target-my_graphics-Debug-43d9ef7d7320be61fdd7.json",
+					"name" : "my_graphics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "myprogramm::@f47c190e8f58262f84c2",
+					"jsonFile" : "target-myprogramm-Debug-2af91d060e8de3455175.json",
+					"name" : "myprogramm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "person::@cd3ef83b8b1db07595fb",
+					"jsonFile" : "target-person-Debug-014ac7d5801c08dd3198.json",
+					"name" : "person",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/muehl/Desktop/code/PAD2_Project/build",
+		"source" : "C:/Users/muehl/Desktop/code/PAD2_Project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
