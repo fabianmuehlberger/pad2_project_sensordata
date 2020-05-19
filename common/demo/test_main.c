@@ -6,7 +6,6 @@
 #include "my_validation/my_validation.h"
 
 
-
 int main(void)
 {
     printf("Start of main\n");
@@ -14,7 +13,7 @@ int main(void)
     //test of librarys
     if (my_file_io_Test())
     {
-        printf("my_graphics Test OK\n");
+        printf("my_file_io Test OK\n");
     }
 
     if (my_graphics_Test())
@@ -26,7 +25,6 @@ int main(void)
     {
         printf("my_validation Test OK\n");
     }
-    
     
     return 0;
 }
