@@ -15,20 +15,17 @@
 ## Hardware:
 Raspberry-Pi, Sense Hat
 
-## Used sensor:
 LSM9DS1 - iNEMO inertial module:
 * 3D accelerometer,
 * 3D gyroscope, 
 * 3D magnetometer
 
-## Project Ziel
+## Projekt Ziel
 Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Datei liest und diese daten auswertet. Es soll mithilfe der Daten ein Bewegungsprofil erstellt werden. Die daten sollen per Konsolen befehl ausgegeben werden können und auch visualisiert werden. 
 
 ## Tests
 
-[test_main](../build/bin/test_main.exe) zeigt alle Source Files im Projekt
-
-
+[test_main](../build/bin/test_main.exe) zeigt alle Source Files im Projekt. (cmake: build first)
 
 ## Libraries:
 
