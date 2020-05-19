@@ -28,8 +28,8 @@ Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Da
 * **Daten lesen:** Daten einlesen, aufbereiten und speichern
     * plausibiliätsprüfung 
     * Fehlerbehandlung / Bereinigung
-* **Terminal Menü:** Simples Terminal Menü um einen Datenpunkt per Konsole auszugeben
 * **Librarys:** Erstellen der Librarys 
+* **Terminal Menü:** Simples Terminal Menü um einen Datenpunkt per Konsole auszugeben
 * **Analyse:** Analyse der Daten. Datenpunkte über einen zeitraum zusammenführen und    vergleichen,
     * Erstellung eines Bewegungsprofils.
     * erstellung eines Weg-Zeit Diagramms

@@ -1,4 +1,4 @@
-#gitignore from template
+# gitignore from template
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
