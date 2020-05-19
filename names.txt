@@ -1,5 +1,0 @@
-42,Homer
-40,Marge
-9,Bart
-7,Lisa
-2,Maggie
