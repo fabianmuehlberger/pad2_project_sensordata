@@ -2,7 +2,7 @@
 
 **Gruppe:** 2
 
-**Github repo:** https://github.com/fabianmuehlberger/pad2_project
+**Github repo:** https://github.com/fabianmuehlberger/pad2_project_sensordata
 
 **Dokument stand:** 19.05.2020
 
