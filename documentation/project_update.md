@@ -1,6 +1,7 @@
 # Project Update
 
 ## Strategien:
+Folgend werden die Strategien und Lösungsansätze beschrieben.
 
 #### Files:
 
@@ -29,7 +30,7 @@
 
 #### Error handling:
 
-* Schreiben eines Log Files, 
+* Schreiben eines Log Files: Enthält alle Zeilen in denen Fehler gefunden werden. 
   * Zeilennummer
   * Fehlerart
   * Spalte
