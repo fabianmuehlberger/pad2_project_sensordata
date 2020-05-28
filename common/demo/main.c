@@ -56,7 +56,7 @@ void help()
 int quitProgram()
 {
     char choice;
-    printf("Are you shure you want to quit? [y, n]\n");
+    printf("Are you shure you want to quit? [y]\n");
     scanf("%c", choice);
     
     if (choice == 'y')

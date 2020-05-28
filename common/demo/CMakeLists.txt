@@ -7,6 +7,9 @@ target_link_libraries(hello_world)
 add_executable(main main.c)
 target_link_libraries(main my_helpers)
 
+add_executable(test_readFile test_readFile.c)
+target_link_libraries(test_readFile)
+
 # add_executable(demo_fnc_ptr main_fnc_ptr.c)
 # target_link_libraries (demo_fnc_ptr)
 
