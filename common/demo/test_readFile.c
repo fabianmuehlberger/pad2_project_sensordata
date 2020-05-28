@@ -24,8 +24,9 @@ typedef struct Data
 
 int checkFile(char *p);
 
-int checkLineCount(FILE **pFile);
-long int checkFileSize(FILE **pFile);
+int checkLineCount(char *fileName);
+int checkLineCount2(FILE **pFile);
+int checkFileSize(char *fileName);
 
 int main(void)
 {
@@ -59,70 +60,70 @@ int main(void)
         printf("File opened\n");
     }
 
+    //int lineCount = checkLineCount(fileName);
+    //printf("LineCount = %i\n", lineCount);
 
-    int lineCount;
-    char c = getc(pFile);
-    while (c != EOF)
-    {
-        if (c == '\n')
-        {
-            lineCount++;
-        }
-        c = getc(pFile);
-    }
-    printf("Linecount = %d", lineCount);
-    return lineCount;
 
-    //check filesize and Lines
+    int lineCount = checkLineCount2(&pFile);
+    printf("LineCount2 = %i\n", lineCount);
 
-    int lineCount = checkLineCount(pFile);
-    long int fileSize = checkFileSize(&pFile);
 
-    printf("LineCount = %i\n", lineCount);
+    long int fileSize = checkFileSize(fileName);
+
     printf("Filesize = %d\n", fileSize);
 
     fclose(pFile);
-
-    /*
-    struct dirent *de;
-
-    DIR *pDir = opendir("..\\..\\ressources");
-    if (pDir == NULL)
-    {
-        puts("Error, unable to read directory");
-        exit(-1);
-    }
-    while ((de = readdir(pDir)) != NULL)
-    {
-        printf("Dir name %s\n", de->d_name);
-    }
-    closedir(pDir);
-*/
 }
 
-int checkLineCount(FILE **pFile)
+int checkLineCount(char *fileName)
 {
-    int lineCount;
-    char c = getc(pFile);
+    int lineCount = 0;
+    FILE *tmp = fopen(fileName, "r");
+    char c = getc(tmp);
     while (c != EOF)
     {
         if (c == '\n')
         {
             lineCount++;
         }
-        c = getc(pFile);
+        c = getc(tmp);
     }
-    printf("Linecount = %d", lineCount);
+    printf("Filename = %s\n", fileName);
+    printf("Linecount = %i\n", lineCount);
+
+    fclose(tmp);
+
     return lineCount;
 }
 
-long int checkFileSize(FILE **pFile)
+int checkLineCount2(FILE **pFile)
 {
-    long int fileSize;
+    int lineCount = 0;
     FILE *tmp = *pFile;
+    char c = getc(tmp);
+    while (c != EOF)
+    {
+        if (c == '\n')
+        {
+            lineCount++;
+        }
+        c = getc(tmp);
+    }
+    printf("Filename(pFile) = %s\n", pFile);
+    printf("Linecount = %i\n", lineCount);
+
+    fclose(tmp);
+
+    return lineCount;
+}
+
+int checkFileSize(char *fileName)
+{
+    long int fileSize = 0;
+    FILE *tmp = fopen(fileName, "r");
 
     fseek(tmp, 0L, SEEK_END);
-    int res = ftell(tmp);
+    fileSize = ftell(tmp);
 
     return fileSize;
 }
