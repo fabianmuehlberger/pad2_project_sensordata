@@ -76,4 +76,7 @@ build
 # html files
 *.html
 
+#coderunner
+tempCodeRunnerFile.c
+
 
