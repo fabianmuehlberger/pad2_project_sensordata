@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
+#include "my_validation/my_validation.h"
 
 #define FILEBUFFER 80
 #define NAMELEN 40
@@ -23,10 +24,6 @@ typedef struct Data
 } Data;
 
 int checkFile(char *p);
-
-int checkLineCount(char *fileName);
-int checkLineCount2(FILE **pFile);
-int checkFileSize(char *fileName);
 
 int main(void)
 {
@@ -60,74 +57,15 @@ int main(void)
         printf("File opened\n");
     }
 
-    //int lineCount = checkLineCount(fileName);
-    //printf("LineCount = %i\n", lineCount);
 
-
-    int lineCount = checkLineCount2(&pFile);
+    //check Line Count of opened File
+    int lineCount = checkLineCount(&pFile);
     printf("LineCount2 = %i\n", lineCount);
 
-
-    long int fileSize = checkFileSize(fileName);
+    //checkl File Size of opened File
+    int fileSize = checkFileSize(&pFile);
 
     printf("Filesize = %d\n", fileSize);
 
     fclose(pFile);
-}
-
-int checkLineCount(char *fileName)
-{
-    int lineCount = 0;
-    FILE *tmp = fopen(fileName, "r");
-    char c = getc(tmp);
-    while (c != EOF)
-    {
-        if (c == '\n')
-        {
-            lineCount++;
-        }
-        c = getc(tmp);
-    }
-    printf("Filename = %s\n", fileName);
-    printf("Linecount = %i\n", lineCount);
-
-    fclose(tmp);
-
-    return lineCount;
-}
-
-int checkLineCount2(FILE **pFile)
-{
-    int lineCount = 0;
-    FILE *tmp = *pFile;
-    char c = getc(tmp);
-    while (c != EOF)
-    {
-        if (c == '\n')
-        {
-            lineCount++;
-        }
-        c = getc(tmp);
-    }
-    printf("Filename(pFile) = %s\n", pFile);
-    printf("Linecount = %i\n", lineCount);
-
-    fclose(tmp);
-
-    return lineCount;
-}
-
-int checkFileSize(char *fileName)
-{
-    long int fileSize = 0;
-    FILE *tmp = fopen(fileName, "r");
-
-    fseek(tmp, 0L, SEEK_END);
-    fileSize = ftell(tmp);
-
-    return fileSize;
-}
-
-int checkFile(char *p)
-{
 }
