@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 #set´s the project name
-project(generic_list)
+project(csv_sensordata)
 
 # setup 
 set(CMAKE_C_FLAGS "-std=c99 -Werror")

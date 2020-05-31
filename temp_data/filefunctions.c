@@ -1,4 +1,5 @@
-    /*
+
+
     struct dirent *de;
 
     DIR *pDir = opendir("..\\..\\ressources");
@@ -12,4 +13,3 @@
         printf("Dir name %s\n", de->d_name);
     }
     closedir(pDir);
-*/

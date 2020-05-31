@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "my_helpers\my_helpers.h"
+#include "my_graphics\my_graphics.h"
 
 void help();
 
@@ -16,7 +19,7 @@ int main(void)
     {
         printf("_____WELCOME_____\n");
         help();
-        printf("enter number to choose option");
+        printf("enter number to choose option: ");
     
         int auswahl = 0;
         inputInt(&auswahl);
@@ -36,7 +39,7 @@ int main(void)
         case 4:
             printf("Option 4 \n");
             alive = quitProgram();
-
+            break;
         default:
             printf("wrong number, try again\n");
             break;
@@ -57,16 +60,16 @@ int quitProgram()
 {
     char choice;
     printf("Are you shure you want to quit? [y]\n");
-    scanf("%c", choice);
+    scanf("%c", &choice);
     
     if (choice == 'y')
     {
-        printf("quitting....");
-        return 1;
+        printf("you entered [%c] quitting....", choice);
+        return 0;
     }
     else
     {
         printf("return to main\n");
-        return 0;
+        return 1;
     }  
 }
