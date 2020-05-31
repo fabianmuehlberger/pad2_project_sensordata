@@ -11,7 +11,7 @@ Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Da
 
 ## Dokumentation
 
-Link zur Projekt [Dokumentation](./documentation/documention.md).
+Link zur Pojekt [Dokumentation](./documentation/documention.md).
 
-Link zu den Projekt [Updates](./documentation/project_update.md).
+Link zu den Pojekt [Updates](./documentation/project_update.md).
 
