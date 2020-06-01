@@ -1,1 +1,0 @@
-add_library(my_graphics SHARED my_graphics.c)

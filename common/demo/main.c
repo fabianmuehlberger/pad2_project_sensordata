@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "my_helpers\my_helpers.h"
-#include "my_graphics\my_graphics.h"
+#include "my_helpers.h"
+#include "my_graphics.h"
 
 void help();
 

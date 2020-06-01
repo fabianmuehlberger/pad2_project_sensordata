@@ -1,1 +1,0 @@
-add_library(my_structure SHARED my_structure.c)

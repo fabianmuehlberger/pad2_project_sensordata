@@ -6,7 +6,7 @@ TEST PROGRAM TO CHECK IF THE DATASTUCTURE IN MY_STRUCTURE.H IS WORKING PROPERLY
 #include <stdlib.h>
 #include <string.h>
 
-#include "my_structure/my_structure.h"
+#include "my_structure.h"
 
 
 

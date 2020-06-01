@@ -1,9 +1,9 @@
 //this programm checks every library in the project and runns a test function incuded int the libraries
 
 #include <stdio.h>
-#include "my_graphics/my_graphics.h"
-#include "my_file_io/my_file_io.h"
-#include "my_validation/my_validation.h"
+#include "my_graphics.h"
+#include "my_file_io.h"
+#include "my_validation.h"
 
 
 int main(void)

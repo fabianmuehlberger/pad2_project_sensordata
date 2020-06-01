@@ -1,1 +1,0 @@
-add_library(my_helpers SHARED my_helpers.c)

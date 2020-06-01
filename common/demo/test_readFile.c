@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <dirent.h>
-#include "my_validation/my_validation.h"
+#include "my_validation.h"
 
 #define FILEBUFFER 80
 #define NAMELEN 40
