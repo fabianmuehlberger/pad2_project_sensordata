@@ -18,12 +18,12 @@ int main(void)
 
     for (int i = 0; i < fileLines; i++)
     {
-        array[i].timeStampS = i;
+        array[i].index = i;
     }
 
     for (int i = 0; i < fileLines; i++)
     {
-        printf("array Timestamp = %d\n", array[i].timeStampS);
+        printf("array Timestamp = %d\n", array[i].index);
     }
     
     return 0;

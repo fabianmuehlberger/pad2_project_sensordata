@@ -8,7 +8,7 @@ add_executable(main main.c)
 target_link_libraries(main my_helpers my_graphics)
 
 add_executable(test_readFile test_readFile.c)
-target_link_libraries(test_readFile my_validation)
+target_link_libraries(test_readFile my_validation my_file_io)
 
 add_executable(test_structure test_structure.c)
 target_link_libraries(test_structure my_structure)

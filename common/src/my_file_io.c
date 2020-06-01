@@ -10,3 +10,12 @@ void readFile()
 {
     
 }
+
+void getFileName(char *fileName)
+{
+    do
+    {
+        scanf("%s", fileName);
+    } while (getchar() != '\n');
+
+}
