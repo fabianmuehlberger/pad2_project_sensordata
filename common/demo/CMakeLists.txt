@@ -9,3 +9,6 @@ target_link_libraries(main my_helpers my_graphics)
 
 add_executable(test_readFile test_readFile.c)
 target_link_libraries(test_readFile my_validation)
+
+add_executable(test_structure test_structure.c)
+target_link_libraries(test_structure my_structure)

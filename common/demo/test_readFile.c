@@ -7,22 +7,6 @@
 #define FILEBUFFER 80
 #define NAMELEN 40
 
-typedef struct Data
-{
-    int timeStamp;
-    int accelerometer_X;
-    int accelerometer_Y;
-    int accelerometer_Z;
-
-    int gyroscope_X;
-    int gyroscope_Y;
-    int gyroscope_Z;
-
-    int magnetometer_X;
-    int magnetometer_Y;
-    int magnetometer_Z;
-} Data;
-
 int checkFile(char *p);
 
 void checkDirectory();
