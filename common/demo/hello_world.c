@@ -2,7 +2,7 @@
 
 #define NAMELEN 40
 
-void getFileName(char *fileName)
+void getUserInputFileName(char *fileName)
 {
     do
     {
@@ -17,8 +17,10 @@ int main(void)
     printf("Hello_World\n");
 
     char filename[NAMELEN];
-    getFileName(filename);
+    getUserInputFileName(filename);
     printf("File name = %s", filename);
+
+    printf("\\\\");
 
     return 0;
 }

@@ -3,7 +3,7 @@
 
 #define LEN 100
 
-char inputString(char *name)
+char getStringFromStdin(char *name)
 {
     char buffer[LEN];
     if (fgets(buffer, sizeof(buffer), stdin) != NULL)
@@ -18,7 +18,7 @@ char inputString(char *name)
     return *name;
 }
 
-int inputInt(int *value)
+int getIntFromStdin(int *value)
 {
     do
     {
@@ -27,7 +27,7 @@ int inputInt(int *value)
     return *value;
 }
 
-char inputChar(char *c)
+char getCharFromStdin(char *c)
 {
     do
     {

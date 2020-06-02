@@ -10,18 +10,25 @@ void readFile(char *fileName);
 int main(void)
 {
     printf("WELCOME TO TEST_READFILE.C\n");
-
+/*
     char fileName[NAMELEN];
-    getFileName(fileName);
+    char fileNameAndPath[NAMELEN];
 
-    printf("filename = %s", fileName);
+    getUserInputStringFromConsole(fileName);
+    strcpy(fileNameAndPath, ".\\\\ressources\\\\");
+
+    strcat(fileNameAndPath, fileName);
+    printf("filename = %s\n", fileNameAndPath);
+*/
+
+    char fileName[NAMELEN] = ".\\ressources\\test_data_short.csv";
 
     char stringToken = ';';
 
     //help to count lines
     
     //check current Direktory
-    checkDirectory();
+    //checkDirectory();
 
     //open and close File
     readFile(fileName);
@@ -32,8 +39,6 @@ int main(void)
 void readFile(char *fileName)
 {
     char buffer[FILEBUFFER];
-    //char fileName[NAMELEN] = ".\\ressources\\test_data_short.csv";
-
     
 
     FILE *pFile;

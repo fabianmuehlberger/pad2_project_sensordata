@@ -2,15 +2,14 @@
 #define _MY_HELPERS_H_
 
 
-// get a string from the commandline
-// returns a string. can be used without return
-char inputString(char *name);
+// returns a string. 
+char getStringFromStdin(char *name);
 
-//get a number from the commandline
-//returns a value. can be used without return
-int inputInt(int *value);
+// returns a int 
+int getIntFromStdin(int *value);
 
-char inputChar(char *c);
+// returns a char * 
+char getCharFromStdin(char *c);
 
 
 #endif

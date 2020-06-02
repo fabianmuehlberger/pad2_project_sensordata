@@ -22,7 +22,7 @@ int main(void)
         printf("enter number to choose option: ");
     
         int auswahl = 0;
-        inputInt(&auswahl);
+        getIntFromStdin(&auswahl);
         
         switch (auswahl)
         {

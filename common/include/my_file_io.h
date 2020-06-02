@@ -8,8 +8,7 @@
 // test of my_file_io
 int my_file_io_Test();
 
-// get Userinput from the console and returns a String
-void getFileName(char *fileName);
+void getUserInputStringFromConsole(char *fileName);
 
 void readFile();
 

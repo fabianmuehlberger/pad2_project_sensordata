@@ -11,7 +11,7 @@ void readFile()
     
 }
 
-void getFileName(char *fileName)
+void getUserInputStringFromConsole(char *fileName)
 {
     do
     {
