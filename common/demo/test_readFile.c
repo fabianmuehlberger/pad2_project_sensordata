@@ -28,8 +28,6 @@ int main(void)
 
     //char fileName[NAMELEN] = ".\\ressources\\test_data_short.csv";
 
-    char stringToken = ';';
-
     //check Line Count of opened File
     int lineCount = checkLineCount(fileNameAndPath);
     printf("LineCount = %i\n", lineCount);
@@ -96,7 +94,7 @@ int checkLineToken(char *fileLine)
 
     for (int i = 0; i < lenght; i++)
     {
-        if (fileLine[i] == ';')
+        if (fileLine[i] == CSV_SEPERATION_TOKEN)
         {
             tokenCount++;
         }

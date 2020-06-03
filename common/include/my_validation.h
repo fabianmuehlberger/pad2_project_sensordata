@@ -3,7 +3,7 @@
 #define _MY_VALIDATION_H_
 
 #define FILE_TOKEN_AMOUNT 10
-#define STRING_TOKEN ';'
+#define CSV_SEPERATION_TOKEN ';'
 
 //simple test funktion to show that my_validation exitst
 int my_validation_Test();
