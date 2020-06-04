@@ -1,10 +1,19 @@
 # TODO
 
     [x] Update Project outline
-    [] Schedule product updates
-    [] Distribute Work
+    [X] Schedule product updates
+    [X] Distribute Work
+    [] Einlesen der CSV Daten 
+    [] Schreiben eines neuen auf fehler geprüften CSV Fils
+    [] Einlesen der Daten in die Datenstruktur
+    [] Auswertung der Daten 
+    [] Error Log erstellung beim Daten einlesen 
 
-    - [] test 
+    [] test der libraries 
+    [] Test der Funktionen mithilde von Testfunktionen 
+    [] Test der Funktionen mithilfe eines Testfiles das alle Testfälle erfüllt
+
+
 
 # NOTES
 
