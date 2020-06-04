@@ -17,4 +17,7 @@ typedef struct Data
     
 }Data;
 
+void createArray(Data *dataArray, int lineCount);
+
+
 #endif

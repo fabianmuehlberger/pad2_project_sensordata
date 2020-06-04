@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>
+#include "my_validation.h"
 
 int my_validation_Test()
 {
@@ -56,4 +57,46 @@ void checkDirectory()
         printf("Dir name %s\n", de->d_name);
     }
     closedir(pDir);
+}
+
+int checkLineToken(char *fileLine)
+{
+    int lenght = strlen(fileLine);
+    int tokenCount = 0;
+
+    for (int i = 0; i < lenght; i++)
+    {
+        if (fileLine[i] == CSV_SEPERATION_TOKEN)
+        {
+            tokenCount++;
+        }
+    }
+    //check for the right amount of ';' in the Line
+
+    if (tokenCount < FILE_TOKEN_AMOUNT)
+    {
+        printf("test not passed\n");
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int checkLineEnding(char *line)
+{
+    int lenght = strlen(line);
+    if (line[lenght - 1] != '\n')
+    {
+        printf("no newline found\n");
+        line[lenght -1] = '\n';
+        line[lenght] = '\0';
+        
+        return 1;
+    }
+    if (line[lenght -1] == '\n')
+    {
+        return 0;
+    }
 }

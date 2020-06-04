@@ -11,5 +11,7 @@ int getIntFromStdin(int *value);
 // returns a char * 
 char getCharFromStdin(char *c);
 
+void removeNewLine(char *line);
+
 
 #endif

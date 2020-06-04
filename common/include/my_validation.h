@@ -2,7 +2,7 @@
 #ifndef _MY_VALIDATION_H_
 #define _MY_VALIDATION_H_
 
-#define FILE_TOKEN_AMOUNT 10
+#define FILE_TOKEN_AMOUNT 9
 #define CSV_SEPERATION_TOKEN ';'
 
 //simple test funktion to show that my_validation exitst
@@ -18,5 +18,10 @@ int checkFileSize(char *pFileSize);
 //prints current directory with its files
 // might be usefull to find a file
 void checkDirectory();
+
+int checkLineToken(char *fileLine);
+
+int checkLineEnding(char *line);
+
 
 #endif
