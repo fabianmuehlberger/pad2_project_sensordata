@@ -5,11 +5,11 @@
 #include "my_structure.h"
 #include "my_file_io.h"
 
-void openFile(char *fileName);
+void openFile(FILE *pFile, char *fileName);
 
 void readFile(char *fileName);
 
-void createArray(FILE *dataArray, int lineCount);
+void createArray(Data *dataArray, int lineCount);
 
 int checkLineToken(char *fileLine);
 
@@ -21,7 +21,10 @@ int main(void)
     char fileNameAndPath[NAMELEN];
 
     getUserInputStringFromConsole(fileName);
+
+    //options for concating the folder path to the filename (LINUX, WIN format)
     //strcpy(fileNameAndPath, ".\\\\ressources\\\\");
+    strcpy(fileNameAndPath, ".//ressources//");
 
     strcat(fileNameAndPath, fileName);
     printf("fileAndPath = %s\n", fileNameAndPath);
@@ -30,11 +33,9 @@ int main(void)
 
     //check Line Count of opened File
     int lineCount = checkLineCount(fileNameAndPath);
-    printf("LineCount = %i\n", lineCount);
 
     //checkl File Size of opened File
     int fileSize = checkFileSize(fileNameAndPath);
-    printf("Filesize = %d\n", fileSize);
 
     //open and close File
     readFile(fileNameAndPath);
@@ -45,7 +46,17 @@ void readFile(char *fileName)
 {
     char buffer[FILEBUFFER];
     FILE *pFile;
-    openFile(pFile);
+
+    pFile = fopen(fileName, "r");
+    if (pFile == NULL)
+    {
+        printf("ERROR could not open File???\n");
+        exit(-1);
+    }
+    else
+    {
+        printf("File opened...\n");
+    }
 
     //print the values of the file
     while (fgets(buffer, FILEBUFFER, pFile) != NULL)
@@ -57,25 +68,8 @@ void readFile(char *fileName)
     fclose(pFile);
 }
 
-// !when finished with readfile()! put this function in my_file_io
-void openFile(char *fileName)
-{
-
-    FILE *pFile;
-    pFile = fopen(fileName, "r");
-    if (pFile == NULL)
-    {
-        printf("ERROR could not open File???\n");
-        exit(-1);
-    }
-    else
-    {
-        printf("File opened...\n");
-    }
-}
-
 // !when finished!, put this funktion in my_file_io
-void createArray(FILE *dataArray, int lineCount)
+void createArray(Data *dataArray, int lineCount)
 {
     Data *tmp = malloc(lineCount * sizeof(Data));
     if (tmp == NULL)
