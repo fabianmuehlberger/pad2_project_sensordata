@@ -21,7 +21,7 @@ int checkLineCount(char *name)
         }
         c = getc(tmp);
     }
-    printf("LineCount = %d", lineCount);
+    printf("LineCount = %d\n", lineCount);
 
     fclose(tmp);
 
@@ -36,7 +36,7 @@ int checkFileSize(char *name)
     fseek(tmp, 0L, SEEK_END);
     fileSize = ftell(tmp);
 
-    printf("File Size = %d", fileSize);
+    printf("File Size = %d\n", fileSize);
 
     return fileSize;
 }
@@ -75,7 +75,6 @@ int checkLineToken(char *fileLine)
 
     if (tokenCount < FILE_TOKEN_AMOUNT)
     {
-        printf("test not passed\n");
         return 1;
     }
     else
@@ -89,7 +88,6 @@ int checkLineEnding(char *line)
     int lenght = strlen(line);
     if (line[lenght - 1] != '\n')
     {
-        printf("no newline found\n");
         line[lenght -1] = '\n';
         line[lenght] = '\0';
         

@@ -5,6 +5,9 @@
 #define FILE_TOKEN_AMOUNT 9
 #define CSV_SEPERATION_TOKEN ';'
 
+#define VALIDATION_TOKEN_ERR "Token check not passed"
+#define VALIDATION_NEWLINE_ERR "no newline line ending"
+
 //simple test funktion to show that my_validation exitst
 int my_validation_Test();
 

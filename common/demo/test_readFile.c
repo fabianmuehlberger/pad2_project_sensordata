@@ -10,23 +10,23 @@
 
 int lineValidatonChecks(char *lineToValidate, int line);
 
-void removeNewLine(char *line);
+void writeErrorLog(int line, int errorCode, char *errorMassage);
 
 int main(void)
 {
     printf("WELCOME TO TEST_READFILE.C\n");
 
     char fileName[NAMELEN];
-    char fileNameAndPath[NAMELEN];
+    char fileNameAndPath[] = RELATIVE_FILEPATH_TO_DATA;
 
     getUserInputStringFromConsole(fileName);
 
     //options for concating the folder path to the filename (LINUX, WIN format)
     //strcpy(fileNameAndPath, ".\\\\ressources\\\\");
-    strcpy(fileNameAndPath, ".//ressources//");
+    //strcpy(fileNameAndPath, ".//ressources//");
 
     strcat(fileNameAndPath, fileName);
-    strcat(fileNameAndPath, ".csv");
+    strcat(fileNameAndPath, CSV_FILE_ENDING);
     printf("fileAndPath = %s\n", fileNameAndPath);
 
     //check Line Count of opened File
@@ -48,7 +48,7 @@ void readFile(char *fileName)
     pFile = fopen(fileName, "r");
     if (pFile == NULL)
     {
-        printf("ERROR could not open source File???\n");
+        printf("ERROR could not open source File\n");
         exit(-1);
     }
     else
@@ -60,7 +60,7 @@ void readFile(char *fileName)
     pWriteFile = fopen(".//ressources//destination.csv", "w+");
     if (pWriteFile == NULL)
     {
-        printf("ERROR could not open destination File???\n");
+        printf("ERROR could not open destination File\n");
     }
     
     int validationcheck = 0;
@@ -68,21 +68,19 @@ void readFile(char *fileName)
     //print the values of the file
     while (fgets(buffer, FILEBUFFER, pFile) != NULL)
     {
-
         if (lineValidatonChecks(buffer, lines))
         {
-            printf("Line %d:  Data validation not passed", lines);
             validationcheck = 1;
         }
         
-        removeNewLine(buffer);
+        removeNewLineFromString(buffer);
 
         fprintf(pWriteFile, "%d;%s;%d\n", lines, buffer, validationcheck);
 
         validationcheck = 0;
         lines++;
     }
-    printf("End of READFILE\n");
+    printf("\nEnd of READFILE\n");
 
     fclose(pFile);
     fclose(pWriteFile);
@@ -95,26 +93,37 @@ int lineValidatonChecks(char *lineToValidate, int line)
     //check tokens
     if (checkLineToken(lineToValidate))
     {
-        printf("Line %d: tokenvalidation not passed", line);
+        printf("Line %d: token validation not passed\n", line);
         checker = 1;
+        writeErrorLog(line, checker, VALIDATION_TOKEN_ERR);
     }
 
     //check line endings
     if (checkLineEnding(lineToValidate))
     {
-        printf("Line %d: lineendingValidation not passed", line);
-        checker = 1;
+        printf("Line %d: lineending validation not passed\n", line);
+        checker = 2;
+        writeErrorLog(line, checker, VALIDATION_NEWLINE_ERR);
     }
+
     
+
     return checker;
 }
-/*
-void removeNewLine(char *line)
+
+void writeErrorLog(int line, int errorCode, char *errorMassage)
 {
-    int new_line = strlen(line) - 1;
-    if (line[new_line] == '\n')
+    FILE *pWriteError;
+    pWriteError = fopen(".//ressources//error_log.csv", "a");
+    if (pWriteError == NULL)
     {
-        line[new_line] = '\0';
+        printf("ERROR could not open error log");
+        exit(-1);
     }
+
+    fprintf(pWriteError, "LINE: %d  ERROR: %d  %s\n", line, errorCode, errorMassage);
+
+    printf("Line %d written to errorlog", line);
+
+    fclose(pWriteError);
 }
-*/
