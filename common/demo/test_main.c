@@ -6,7 +6,7 @@
 #include "my_validation.h"
 
 
-int main(void)
+int main()
 {
     printf("Start of main\n");
 
@@ -25,6 +25,23 @@ int main(void)
     {
         printf("my_validation Test OK\n");
     }
-    
-    return 0;
+
+    char joice = 'a';
+    printHelp();
+    while(joice != 'e')
+    {
+        printf("\nuser input: ");
+        scanf(" %c", &joice);
+
+        switch(joice)
+        {
+            case 'p': printData();
+            break;
+            case 'h': printHelp();
+            break;
+            case 'e': printf("EXIT..."); return 0;
+        }
+    }
+
+return 0;
 }

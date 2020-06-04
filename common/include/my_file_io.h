@@ -12,5 +12,9 @@ void getUserInputStringFromConsole(char *fileName);
 
 void readFile();
 
+void printHelp();
+
+void printData();
+
 // _MY_FILE_IO_H_
 #endif  
