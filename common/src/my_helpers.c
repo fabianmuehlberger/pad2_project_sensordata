@@ -36,3 +36,12 @@ char getCharFromStdin(char *c)
 
     return *c;
 }
+
+void removeNewLine(char *line)
+{
+    int new_line = strlen(line) - 1;
+    if (line[new_line] == '\n')
+    {
+        line[new_line] = '\0';
+    }
+}

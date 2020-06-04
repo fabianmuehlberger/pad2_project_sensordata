@@ -4,14 +4,13 @@
 #include "my_validation.h"
 #include "my_structure.h"
 #include "my_file_io.h"
+#include "my_helpers.h"
 
-void openFile(FILE *pFile, char *fileName);
+//void readFile(char *fileName);
 
-void readFile(char *fileName);
+int lineValidatonChecks(char *lineToValidate, int line);
 
-void createArray(Data *dataArray, int lineCount);
-
-int checkLineToken(char *fileLine);
+void removeNewLine(char *line);
 
 int main(void)
 {
@@ -27,9 +26,8 @@ int main(void)
     strcpy(fileNameAndPath, ".//ressources//");
 
     strcat(fileNameAndPath, fileName);
+    strcat(fileNameAndPath, ".csv");
     printf("fileAndPath = %s\n", fileNameAndPath);
-
-    //char fileName[NAMELEN] = ".\\ressources\\test_data_short.csv";
 
     //check Line Count of opened File
     int lineCount = checkLineCount(fileNameAndPath);
@@ -50,7 +48,7 @@ void readFile(char *fileName)
     pFile = fopen(fileName, "r");
     if (pFile == NULL)
     {
-        printf("ERROR could not open File???\n");
+        printf("ERROR could not open source File???\n");
         exit(-1);
     }
     else
@@ -58,48 +56,65 @@ void readFile(char *fileName)
         printf("File opened...\n");
     }
 
+    FILE *pWriteFile;
+    pWriteFile = fopen(".//ressources//destination.csv", "w+");
+    if (pWriteFile == NULL)
+    {
+        printf("ERROR could not open destination File???\n");
+    }
+    
+    int validationcheck = 0;
+    int lines = 1;
     //print the values of the file
     while (fgets(buffer, FILEBUFFER, pFile) != NULL)
     {
-        checkLineToken(buffer);
-        printf("%s", buffer);
+
+        if (lineValidatonChecks(buffer, lines))
+        {
+            printf("Line %d:  Data validation not passed", lines);
+            validationcheck = 1;
+        }
+        
+        removeNewLine(buffer);
+
+        fprintf(pWriteFile, "%d;%s;%d\n", lines, buffer, validationcheck);
+
+        validationcheck = 0;
+        lines++;
     }
+    printf("End of READFILE\n");
 
     fclose(pFile);
+    fclose(pWriteFile);
 }
 
-// !when finished!, put this funktion in my_file_io
-void createArray(Data *dataArray, int lineCount)
+
+int lineValidatonChecks(char *lineToValidate, int line)
 {
-    Data *tmp = malloc(lineCount * sizeof(Data));
-    if (tmp == NULL)
+    int checker = 0;
+    //check tokens
+    if (checkLineToken(lineToValidate))
     {
-        printf("NO MEMORY ALLOCATED");
-        exit(-1);
+        printf("Line %d: tokenvalidation not passed", line);
+        checker = 1;
     }
-    dataArray = tmp;
-}
 
-// !when finished! put this funktion in my_validation
-int checkLineToken(char *fileLine)
+    //check line endings
+    if (checkLineEnding(lineToValidate))
+    {
+        printf("Line %d: lineendingValidation not passed", line);
+        checker = 1;
+    }
+    
+    return checker;
+}
+/*
+void removeNewLine(char *line)
 {
-    int lenght = strlen(fileLine);
-    int tokenCount = 0;
-
-    for (int i = 0; i < lenght; i++)
+    int new_line = strlen(line) - 1;
+    if (line[new_line] == '\n')
     {
-        if (fileLine[i] == CSV_SEPERATION_TOKEN)
-        {
-            tokenCount++;
-        }
-    }
-    //check for the right amount of ';' in the Line
-    if (tokenCount < FILE_TOKEN_AMOUNT)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
+        line[new_line] = '\0';
     }
 }
+*/
