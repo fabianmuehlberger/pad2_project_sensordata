@@ -117,7 +117,7 @@ void writeErrorLog(int line, int errorCode, char *errorMassage)
     pWriteError = fopen(".//ressources//error_log.csv", "a");
     if (pWriteError == NULL)
     {
-        printf("ERROR could not open error log");
+        printf("ERROR could not open errorlog");
         exit(-1);
     }
 
