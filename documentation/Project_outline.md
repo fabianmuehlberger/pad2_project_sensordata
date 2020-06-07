@@ -38,7 +38,6 @@ Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Da
     * graphics.h  oder
     * OpenGL
     
-
 ## Projektmanagement:
 
 Alle Mitarbeiter sind am Projekt gleichberechtigt und mit ihrer Leistung für die Erfüllung verantwortlich.
@@ -78,7 +77,7 @@ Falls möglich soll auch eine manuelle Überprüfung der Daten stattfinden. Dies
 * Die Messwerte werden in Bezug zum Koordinaten-Nullpunkt dargestellt.
  
 ## Dokumentation 
-Die Dokumentation wird mithilfe eines simplen markdown Files (.md) erzeugt. Geplant ist eine Beschreibung der wesentlichen Funktionen in der Dokumentation um einen Überbick über Programm und Funktionen zu bieten.  Grundsätzlich wird die Beschreibung der Funktionen in den Funktionsprotoypen stattfinden.
+Die Dokumentation wird mithilfe eines simplen markdown Files (.md) erzeugt. Geplant ist eine Beschreibung der wesentlichen Funktionen in der Dokumentation um einen Überbick über Programm und Funktionen zu bieten.  Grundsätzlich wird die Beschreibung der Funktionen in den Source und Header Files stattfinden.
 
 
 

@@ -6,7 +6,7 @@
 #include "my_file_io.h"
 #include "my_helpers.h"
 
-//void readFile(char *fileName);
+//void readSourceCSVFile(char *fileName);
 
 int lineValidatonChecks(char *lineToValidate, int line);
 
@@ -36,11 +36,11 @@ int main(void)
     int fileSize = checkFileSize(fileNameAndPath);
 
     //open and close File
-    readFile(fileNameAndPath);
+    readSourceCSVFile(fileNameAndPath);
 }
 
 // !when finished! put this funktion in my_file_io
-void readFile(char *fileName)
+void readSourceCSVFile(char *fileName)
 {
     char buffer[FILEBUFFER];
     FILE *pFile;
@@ -87,43 +87,4 @@ void readFile(char *fileName)
 }
 
 
-int lineValidatonChecks(char *lineToValidate, int line)
-{
-    int checker = 0;
-    //check tokens
-    if (checkLineToken(lineToValidate))
-    {
-        printf("Line %d: token validation not passed\n", line);
-        checker = 1;
-        writeErrorLog(line, checker, VALIDATION_TOKEN_ERR);
-    }
 
-    //check line endings
-    if (checkLineEnding(lineToValidate))
-    {
-        printf("Line %d: lineending validation not passed\n", line);
-        checker = 2;
-        writeErrorLog(line, checker, VALIDATION_NEWLINE_ERR);
-    }
-
-    
-
-    return checker;
-}
-
-void writeErrorLog(int line, int errorCode, char *errorMassage)
-{
-    FILE *pWriteError;
-    pWriteError = fopen(".//ressources//error_log.csv", "a");
-    if (pWriteError == NULL)
-    {
-        printf("ERROR could not open error log");
-        exit(-1);
-    }
-
-    fprintf(pWriteError, "LINE: %d  ERROR: %d  %s\n", line, errorCode, errorMassage);
-
-    printf("Line %d written to errorlog", line);
-
-    fclose(pWriteError);
-}

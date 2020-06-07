@@ -98,3 +98,25 @@ int checkLineEnding(char *line)
         return 0;
     }
 }
+
+int lineValidatonChecks(char *lineToValidate, int line)
+{
+    int checker = 0;
+    //check tokens
+    if (checkLineToken(lineToValidate))
+    {
+        printf("Line %d: token validation not passed\n", line);
+        checker = 1;
+        writeErrorLog(line, checker, VALIDATION_TOKEN_ERR);
+    }
+
+    //check line endings
+    if (checkLineEnding(lineToValidate))
+    {
+        printf("Line %d: lineending validation not passed\n", line);
+        checker = 2;
+        writeErrorLog(line, checker, VALIDATION_NEWLINE_ERR);
+    }
+
+    return checker;
+}

@@ -12,12 +12,13 @@ int my_file_io_Test();
 
 void getUserInputStringFromConsole(char *fileName);
 
-void readFile();
-
+void readSourceCSVFile();
 
 void printHelp();
 
 void printData();
+
+void writeErrorLog(int line, int errorCode, char *errorMassage);
 
 // _MY_FILE_IO_H_
 #endif  

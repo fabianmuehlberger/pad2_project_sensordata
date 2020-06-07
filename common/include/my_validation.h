@@ -26,5 +26,7 @@ int checkLineToken(char *fileLine);
 
 int checkLineEnding(char *line);
 
+int lineValidatonChecks(char *lineToValidate, int line);
+
 
 #endif
