@@ -80,9 +80,16 @@ Projektfortschritt ist im Dokument [project_update](../documentation/project_upd
 
 ## Code Conventions:
 
-* [GNU Style Convention:](https://developer.gnome.org/programming-guidelines/stable/c-coding-style.html.en)
-* Files: all lowercase seperated by underscore: ```foo```, ```foo_bar```
-* Variables: Camelcase convention: ```fizz```, ```fizzBuzz```
+[GNU Style Convention:](https://developer.gnome.org/programming-guidelines/stable/c-coding-style.html.en)
+
+Item | Convention | 
+---------|----------
+ Struct    |          ```TitleCase```
+ Struct Members | ```lower_case``` or ```lowerCase```
+ Functions | ```TitleCase``` or ```pfx_TitleCase``` (pfx = two or three letter module prefix)
+ Trivial variables  | ```i``` or ```x```, etc...
+ Local variables | ```lower_case``` or ```lowerCase```
+
 
 ## Projekt Struktur
 
