@@ -28,5 +28,6 @@ int checkLineEnding(char *line);
 
 int lineValidatonChecks(char *lineToValidate, int line);
 
+void writeErrorLog(int line, int errorCode, char *errorMassage);
 
 #endif
