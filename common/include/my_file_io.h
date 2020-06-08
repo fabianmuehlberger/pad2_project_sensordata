@@ -18,7 +18,5 @@ void printHelp();
 
 void printData();
 
-void writeErrorLog(int line, int errorCode, char *errorMassage);
-
 // _MY_FILE_IO_H_
 #endif  

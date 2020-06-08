@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <dirent.h>
 #include "my_validation.h"
+#include "my_file_io.h"
 
 int my_validation_Test()
 {
@@ -63,10 +64,11 @@ int checkLineToken(char *fileLine)
 {
     int lenght = strlen(fileLine);
     int tokenCount = 0;
+    char csv_token[] = ";";
 
     for (int i = 0; i < lenght; i++)
     {
-        if (fileLine[i] == CSV_SEPERATION_TOKEN)
+        if (fileLine[i] == ';')
         {
             tokenCount++;
         }
@@ -102,6 +104,7 @@ int checkLineEnding(char *line)
 int lineValidatonChecks(char *lineToValidate, int line)
 {
     int checker = 0;
+    char csv_token[] = ";";
     //check tokens
     if (checkLineToken(lineToValidate))
     {
@@ -127,7 +130,7 @@ void writeErrorLog(int line, int errorCode, char *errorMassage)
     pWriteError = fopen(".//ressources//error_log.csv", "a");
     if (pWriteError == NULL)
     {
-        printf("ERROR could not open errorlog");
+        printf("ERROR could not open error log");
         exit(-1);
     }
 
@@ -135,4 +138,5 @@ void writeErrorLog(int line, int errorCode, char *errorMassage)
 
     printf("Line %d written to errorlog", line);
 
+    fclose(pWriteError);
 }

@@ -6,18 +6,26 @@
 typedef struct Data
 {
     int index;
-    int timeStampS;
     int timeStampMS;
-    int value1;
-    int value2;
-    int value3;
-    int value4;
-    int value5;
-    int value6;
+    int validationCheck;
+
+    int gyro_X;
+    int gyro_Y;
+    int gyro_z;
+
+    int acc_X;
+    int acc_Y;
+    int acc_Z;
+
+    int mag_X;
+    int mag_Y;
+    int mag_Z;
     
 }Data;
 
 void createArray(Data *dataArray, int lineCount);
+
+Data writeDataToStructureArray(char *buffer);
 
 
 #endif

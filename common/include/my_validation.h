@@ -1,9 +1,7 @@
-
 #ifndef _MY_VALIDATION_H_
 #define _MY_VALIDATION_H_
 
 #define FILE_TOKEN_AMOUNT 9
-#define CSV_SEPERATION_TOKEN ';'
 
 #define VALIDATION_TOKEN_ERR "Token check not passed"
 #define VALIDATION_NEWLINE_ERR "no newline line ending"
