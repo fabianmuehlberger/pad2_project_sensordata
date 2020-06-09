@@ -71,6 +71,9 @@ Datenstrukuren
 
 #### File Lesen:
 
+## Aufwandsabschätzung:
+
+
 
 
 ## Projektmanagement
