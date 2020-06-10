@@ -12,3 +12,6 @@ target_link_libraries(test_readFile my_validation my_file_io my_helpers my_struc
 
 add_executable(test_structure test_structure.c)
 target_link_libraries(test_structure my_structure)
+
+add_executable(test_data_conversion test_data_conversion.c)
+target_link_libraries(test_data_conversion)
