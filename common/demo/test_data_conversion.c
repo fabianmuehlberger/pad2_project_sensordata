@@ -28,6 +28,8 @@ Data writeDataToStructureArray(char *buffer);
 
 void printSomeData(Data someData);
 
+void printAnoterString(char *anotherString);
+
 int main(void)
 {
     char string[STRINGLEN];
@@ -47,16 +49,23 @@ int main(void)
 
     //CONVERSION:
 
-    long int number;
 
-    number = strtol(curser, NULL, 16);
-
-    printf("%lu", number);
 
     somedata = writeDataToStructureArray(string);
 
     printSomeData(somedata);
     return 0;
+}
+void printAnoterString(char *anotherString)
+{
+    char *curser;
+    curser = anotherString;
+
+    long int number;
+
+    number = strtol(curser, NULL, 16);
+
+    printf("%lu", number);
 }
 
 Data writeDataToStructureArray(char *buffer)
@@ -67,8 +76,11 @@ Data writeDataToStructureArray(char *buffer)
     char seperator[] = ";";
 
     curser = strtok(buffer, seperator);
-    tmpData.timeStampMS = atof(curser);
+    tmpData.index = atof(curser);
 
+    curser = strtok(NULL, seperator);
+    tmpData.validationCheck = (int)strtol(curser, NULL, 16);
+    
     curser = strtok(NULL, seperator);
     tmpData.timeStampMS = (int)strtol(curser, NULL, 16);
     
@@ -107,6 +119,7 @@ void printSomeData(Data someData)
     printf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",
            someData.index,
            someData.validationCheck,
+           someData.timeStampMS,
            someData.acc_X,
            someData.acc_Y,
            someData.acc_Z,
