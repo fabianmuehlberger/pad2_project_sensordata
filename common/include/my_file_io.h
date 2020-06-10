@@ -4,7 +4,7 @@
 //DEFINES 
 #define FILEBUFFER 200 
 #define NAMELEN 40
-#define RELATIVE_FILEPATH_TO_DATA ".//ressources//"
+#define RELATIVE_FILEPATH_TO_DATA "..//..//ressources//"
 #define CSV_FILE_ENDING ".csv"
 
 // test of my_file_io

@@ -127,7 +127,7 @@ int lineValidatonChecks(char *lineToValidate, int line)
 void writeErrorLog(int line, int errorCode, char *errorMassage)
 {
     FILE *pWriteError;
-    pWriteError = fopen(".//ressources//error_log.csv", "a");
+    pWriteError = fopen("..//..//ressources//error_log.csv", "a");
     if (pWriteError == NULL)
     {
         printf("ERROR could not open error log");

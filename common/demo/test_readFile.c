@@ -57,7 +57,7 @@ void readSourceCSVFile(char *fileName)
     }
 
     FILE *pWriteFile;
-    pWriteFile = fopen(".//ressources//destination.csv", "w+");
+    pWriteFile = fopen("..//..//ressources//destination.csv", "w+");
     if (pWriteFile == NULL)
     {
         printf("ERROR could not open destination File\n");
