@@ -5,7 +5,9 @@
 #include "my_structure.h"
 #include "my_file_io.h"
 #include "my_helpers.h"
-
+/*
+#define FILEBUFFER 200 
+#define NAMELEN 40
 //void readSourceCSVFile(char *fileName);
 
 int lineValidatonChecks(char *lineToValidate, int line);
@@ -85,7 +87,7 @@ void readSourceCSVFile(char *fileName)
     fclose(pFile);
     fclose(pWriteFile);
 }
-
+*/
 
 
 
