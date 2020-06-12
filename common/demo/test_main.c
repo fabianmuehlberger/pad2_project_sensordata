@@ -14,8 +14,10 @@ Clean_Data dataConversion(Raw_Data rawData);
 
 int main(void)
 {
-    printf("Start of main\n");
+    char *fileName;
 
+    printf("Start of main\n");
+    getUserInputStringFromConsole(fileName);
     Raw_Data dataPoint;
     Clean_Data theData;
 

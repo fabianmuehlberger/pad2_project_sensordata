@@ -19,7 +19,7 @@
 #define RAD_TO_DEG 57.29578
 #define M_PI 3.14159265358979323846
 
-void openDestinationFile();
+void openDestinationFile(); //Funktions Reihenfolge Debug
 
 
 void removeNewLineFromString(char *line)
