@@ -4,44 +4,31 @@
 #include "my_graphics.h"
 #include "my_file_io.h"
 #include "my_validation.h"
+#include "my_structure.h"
+#define FILEBUFFER 200 
+#define NAMELEN 40
+
+Raw_Data readRawDataFromCSV(char *buffer);
+Clean_Data dataConversion(Raw_Data rawData);
 
 
-int main()
+int main(void)
 {
     printf("Start of main\n");
 
-    //test of librarys
-    if (my_file_io_Test())
-    {
-        printf("my_file_io Test OK\n");
-    }
+    Raw_Data dataPoint;
+    Clean_Data theData;
 
-    if (my_graphics_Test())
-    {
-        printf("my_graphics Test OK\n");
-    }
-    
-    if (my_validation_Test())
-    {
-        printf("my_validation Test OK\n");
-    }
+    char sourceFileName[NAMELEN] = "source.csv";
+    char rawFileName[NAMELEN] = "destination.csv";
+    char cleanFileName[NAMELEN] = "cleanData.csv";
 
-    char joice = 'a';
-    printHelp();
-    while(joice != 'e')
-    {
-        printf("\nuser input: ");
-        scanf(" %c", &joice);
+    readSourceFile(sourceFileName);
 
-        switch(joice)
-        {
-            case 'p': printData();
-            break;
-            case 'h': printHelp();
-            break;
-            case 'e': printf("EXIT..."); return 0;
-        }
-    }
+	readRawDataFromCSV(rawFileName);
 
-return 0;
+    theData = dataConversion(dataPoint);
+
+    printRawData(dataPoint);
+    printCleanData(theData);    
 }

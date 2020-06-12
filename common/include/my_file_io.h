@@ -2,8 +2,7 @@
 #define _MY_FILE_IO_H_
 
 //DEFINES 
-#define FILEBUFFER 200 
-#define NAMELEN 40
+
 #define RELATIVE_FILEPATH_TO_DATA "..//..//ressources//"
 #define CSV_FILE_ENDING ".csv"
 
@@ -12,7 +11,7 @@ int my_file_io_Test();
 
 void getUserInputStringFromConsole(char *fileName);
 
-void readSourceCSVFile();
+void readSourceFile();
 
 void printHelp();
 

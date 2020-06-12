@@ -1,6 +1,6 @@
 /*
 TEST PROGRAM TO CHECK IF THE DATASTUCTURE IN MY_STRUCTURE.H IS WORKING PROPERLY
-*/
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,3 +28,4 @@ int main(void)
     
     return 0;
 }
+*/

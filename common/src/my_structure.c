@@ -4,6 +4,18 @@
 #include "my_structure.h"
 #include "my_validation.h"
 
+
+void printRawData(Raw_Data someData);
+
+void printCleanData(Clean_Data c_data);
+
+void changeAccAxis(Clean_Data *tmp);
+
+void removeNewLineFromString(char *line);
+
+void printDataToCleanData(Clean_Data data);
+
+/*
 void createArray(Data *dataArray, int lineCount)
 {
     Data *tmp = malloc(lineCount * sizeof(Data));
@@ -56,3 +68,4 @@ Data writeDataToStructureArray(char *buffer)
     return tmpData;
 }
 
+*/
