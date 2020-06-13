@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="csv_sensordata"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\common\;CMake Files\common\src\;CMake Files\common\demo\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_validation">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_validation.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_validation"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_validation/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_validation.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_validation/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_file_io">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_file_io.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_file_io"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_file_io/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_file_io.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_file_io/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_structure">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_structure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_structure"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_structure/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_structure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_structure/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_graphics">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_graphics.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_graphics"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_graphics/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_graphics.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_graphics/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_helpers">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_helpers.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_helpers"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="my_helpers/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/lib/libmy_helpers.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 my_helpers/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main_main">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/bin/main_main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 main_main"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main_main/fast">
+				<Option output="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/bin/main_main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/muehl/Desktop/code/pad2_project/common/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 main_main/fast"/>
+					<CompileFile command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/muehl/Desktop/code/pad2_project/cmake-build-debug/common/demo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/demo/main_main.c">
+			<Option target="main_main"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/my_file_io.c">
+			<Option target="my_file_io"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/my_graphics.c">
+			<Option target="my_graphics"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/my_helpers.c">
+			<Option target="my_helpers"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/my_structure.c">
+			<Option target="my_structure"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/my_validation.c">
+			<Option target="my_validation"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\common\"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\common\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/muehl/Desktop/code/pad2_project/common/demo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\common\demo\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

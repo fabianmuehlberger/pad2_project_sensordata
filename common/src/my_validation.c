@@ -12,7 +12,11 @@ int my_validation_Test()
 int checkLineCount(char *name)
 {
     int lineCount = 0;
-    FILE *tmp = fopen(name, "r");
+    //FILE *tmp = fopen(name, "r");
+
+    FILE *tmp = NULL;
+    tmp = openCSVFile(name, tmp, "r");
+
     char c = getc(tmp);
     while (c != EOF)
     {
@@ -32,7 +36,13 @@ int checkLineCount(char *name)
 int checkFileSize(char *name)
 {
     int fileSize = 0;
-    FILE *tmp = fopen(name, "r");
+    FILE *tmp = NULL; 
+
+    tmp = openCSVFile(name, tmp, "r");
+
+    //= fopen(name, "r");
+
+
 
     fseek(tmp, 0L, SEEK_END);
     fileSize = ftell(tmp);
@@ -101,7 +111,27 @@ int checkLineEnding(char *line)
     }
 }
 
-int lineValidatonChecks(char *lineToValidate, int line)
+void writeErrorLog(char *errorLogFileName, int line, int errorCode, char *errorMassage)
+{
+    FILE *pWriteError = NULL;
+    pWriteError = openCSVFile(errorLogFileName, pWriteError, "a" );
+    /*
+    pWriteError = fopen(errorLogFileName, "a");
+    if (pWriteError == NULL)
+    {
+        printf("ERROR could not open error log");
+        exit(-1);
+    }
+    */
+    
+    fprintf(pWriteError, "LINE: %d  ERROR: %d  %s\n", line, errorCode, errorMassage);
+
+    printf("Line %d written to errorlog", line);
+
+    fclose(pWriteError);
+}
+
+int lineValidatonChecks(char *lineToValidate, int line, char *errorLogFileName)
 {
     int checker = 0;
     char csv_token[] = ";";
@@ -110,7 +140,7 @@ int lineValidatonChecks(char *lineToValidate, int line)
     {
         printf("Line %d: token validation not passed\n", line);
         checker = 1;
-        writeErrorLog(line, checker, VALIDATION_TOKEN_ERR);
+        writeErrorLog(errorLogFileName, line, checker, VALIDATION_TOKEN_ERR);
     }
 
     //check line endings
@@ -118,25 +148,9 @@ int lineValidatonChecks(char *lineToValidate, int line)
     {
         printf("Line %d: lineending validation not passed\n", line);
         checker = 2;
-        writeErrorLog(line, checker, VALIDATION_NEWLINE_ERR);
+        writeErrorLog(errorLogFileName, line, checker, VALIDATION_NEWLINE_ERR);
     }
 
     return checker;
 }
 
-void writeErrorLog(int line, int errorCode, char *errorMassage)
-{
-    FILE *pWriteError;
-    pWriteError = fopen("..//..//ressources//error_log.csv", "a");
-    if (pWriteError == NULL)
-    {
-        printf("ERROR could not open error log");
-        exit(-1);
-    }
-
-    fprintf(pWriteError, "LINE: %d  ERROR: %d  %s\n", line, errorCode, errorMassage);
-
-    printf("Line %d written to errorlog", line);
-
-    fclose(pWriteError);
-}

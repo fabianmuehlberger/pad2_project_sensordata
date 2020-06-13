@@ -2,7 +2,7 @@
 include_directories(include)
 
 
-# adds subdirectorys inside of include
+# adds subdirectories inside of Common
 add_subdirectory(src)
 add_subdirectory(demo)
 
