@@ -51,33 +51,42 @@ Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Da
   * Verrechnung der Datensaetze um eine hoehere genauigkeit zu erreichen.
  
 
-### Tests:
-
-[test_main](../build/bin/test_main.exe)   
-* zeigt alle Source Files im Projekt. 
-* Überprüfung der Lese und Schreibe Funktionen mithilfe eines Testfiles
-* Es werden folgende Tests durchgeführt:
-  * Überprüfung auf ```\n``` jedes Zeilenendes
-  * Anzahld der Seperationstokens ```;``` 
-
 ### Error Handling:
-Schreiben eines error_log.csv Files:
-
+Schreiben eines error_log.csv Files:  
 Zeilennummer | Fehlercode | Fehlertext
 ---------|----------|---------
  5 | 1 | Fehlender Seperationstoken
+
+ Es werden folgende Tests durchgeführt:
+  * Überprüfung auf ```\n``` jedes Zeilenendes
+  * Anzahld der Seperationstokens ```;``` 
 
 * *aus zeitmangel wurden keine sinnbringenden Test geschrieben*
 
   
 ## Projekmanagement:
 
-### Strategie
+Um die Zusammenarbeit zu optimieren wurde beschlossen das Projekt als Github Projekt zu realisieren. Es wurden intern regeln vereinbahrt wie mit pushed, merges etz. umzugehen ist.  
+Die Codebase wurde als CMAKE Projekt komzipiert und aufgebaut. Hierzu wurde ein Basisprojekt von Hr. Bader verwendet das and die Bedürfnisse des Projektes angepasst wurde. Wesentlich war für das Team war eine simple CMake Struktur, in die Weitere Source- und Headerfiles eingebunden werden konnten.  
 
+### Milesstones:
 
+* **Daten lesen:** Daten einlesen, aufbereiten und speichern
+    * plausibiliätsprüfung 
+    * Fehlerbehandlung / Bereinigung
+* **Librarys:** Erstellen der Librarys 
+* **Terminal Menü:** Simples Terminal Menü um einen Datenpunkt per Konsole auszugeben
+* **Analyse:** Analyse der Daten. Datenpunkte über einen zeitraum zusammenführen und    vergleichen,
+    * Erstellung eines Bewegungsprofils.
+    * erstellung eines Weg-Zeit Diagramms
+    * Beschleunigungs-Zeit Diagramms
+* **(Stretch goal)** *muss erst auf machbarkeit geprüft werden* :Visualisierung der daten mithilfe von 
+    * graphics.h  oder
+    * OpenGL
 
-## Externe Libraries:
+## Externe Libraries/ Datenstrukturen:
 * Die umrechnung der daten wurde von [ozzmaker](http://ozzmaker.com/) übernommen, umgeschrieben und für unsere zwaeke veraendert.
+* Die Grundlegende Projektstruktur wurde von Hr. Bader zur verfügung gestellt. 
 
 ### Header Files:
 
