@@ -40,7 +40,7 @@ int main(void)
 
     
     int alive = 1; //keeps the main while loop alive
-    printf("_____WELCOME_____\n");
+    printf("\n_____WELCOME_____\n");
     printHelp(); 
 
     while (alive != 0)
@@ -53,30 +53,30 @@ int main(void)
         switch (auswahl)
         {
         case 1:
-            printf("reading source file...\n\n");
+            printf("| reading source file... |\n\n");
             readSourceFile(sourceFileName, rawFileName, errorLogFileName);
             break;
         case 2:
-            printf("reading RawDataFile...\n\n");
+            printf("| reading RawDataFile... |\n\n");
             readRawDataFile(rawFileName, cleanFileName);
             break;
         case 3:
-            printf("printing RawData...\n");
+            printf("\n| printing RawData... |\n");
             printRawData(RawDataArray);
             break;
         case 4:
-            printf("printing CleanData...\n");
+            printf("\n| printing CleanData... |\n");
             printCleanData(CleanDataArray);
             break;
         case 5:
             printHelp();
             break;
         case 6: 
-            printf("END OF PROGRAM");
+            printf("| END OF PROGRAM |");
             alive = 0;
             break;
         default:
-            printf("choosen number not supported\n");
+            printf("| choosen number not supported |\n");
             break;
         }
     }   
@@ -94,7 +94,7 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
     FILE *fp_WriteRawDataFile = NULL;
     fp_WriteRawDataFile = openCSVFile(rawFileName, fp_WriteRawDataFile, "w");
 
-    printf("errors occured:\n");
+    printf("errors in CSV file detected ->: ");
 
     while (fgets(buffer, FILEBUFFER, fp_ReadSourceFile) != NULL)
     {
@@ -115,7 +115,7 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
     fclose(fp_ReadSourceFile);
     fclose(fp_WriteRawDataFile);
     printf("\nEnd of READFILE\n");
-    printf("source -> validation -> raw -> (file generated)\n");
+    printf("\nsource -> validation -> raw -> (file generated)\n");
 }
 
 void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
@@ -143,5 +143,5 @@ void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
     fclose(fp_ReadRaw);
 
     printf("END OF READ RAW DATA\n");
-    printf("raw -> conversion -> clean -> (file generated)\n");
+    printf("\nraw -> conversion -> clean -> (file generated)\n");
 }
