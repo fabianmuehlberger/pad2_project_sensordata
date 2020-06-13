@@ -1,6 +1,8 @@
 #ifndef _MY_VALIDATION_H_
 #define _MY_VALIDATION_H_
 
+#include "my_file_io.h"
+
 #define FILE_TOKEN_AMOUNT 9
 
 #define VALIDATION_TOKEN_ERR "Token check not passed"
@@ -24,8 +26,8 @@ int checkLineToken(char *fileLine);
 
 int checkLineEnding(char *line);
 
-int lineValidatonChecks(char *lineToValidate, int line);
+int lineValidatonChecks(char *lineToValidate, int line, char *errorLogFileName);
 
-void writeErrorLog(int line, int errorCode, char *errorMassage);
+void writeErrorLog(char *errorLogFileName, int line, int errorCode, char *errorMassage);
 
 #endif

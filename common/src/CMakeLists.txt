@@ -1,7 +1,8 @@
-# adds the directorys to the project
-add_library(my_file_io SHARED my_file_io.c)
-add_library(my_graphics SHARED my_graphics.c)
-add_library(my_helpers SHARED my_helpers.c)
-add_library(my_structure SHARED my_structure.c)
-add_library(my_validation SHARED my_validation.c)
+# adds the directories to the project
+add_library(my_file_io STATIC my_file_io.c)
+add_library(my_validation STATIC my_validation.c)
+add_library(my_graphics STATIC my_graphics.c)
+add_library(my_helpers STATIC my_helpers.c)
+add_library(my_structure STATIC my_structure.c)
+
 

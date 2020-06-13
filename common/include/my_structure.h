@@ -3,29 +3,46 @@
 
 // datastructure for the values read form the csv File 
 // Data should be cleaded and without any problematic Values
-typedef struct Data
+typedef struct Raw_Data
 {
     int index;
-    int timeStampMS;
     int validationCheck;
-
-    int gyro_X;
-    int gyro_Y;
-    int gyro_z;
+    int timeStampMS;
 
     int acc_X;
     int acc_Y;
     int acc_Z;
 
+    int gyro_X;
+    int gyro_Y;
+    int gyro_Z;
+
     int mag_X;
     int mag_Y;
     int mag_Z;
-    
-}Data;
 
-void createArray(Data *dataArray, int lineCount);
+} Raw_Data;
 
-Data writeDataToStructureArray(char *buffer);
+typedef struct Clean_Data
+{
+    float gyroXangle;
+    float gyroYangle;
+    float gyroZangle;
+
+    float AccYangle;
+    float AccXangle;
+
+    float CFangleX;
+    float CFangleY;
+
+} Clean_Data;
+
+
+//nachschauen ob noch benoetigt!!!!!
+void createArray(Raw_Data *dataArray, int lineCount);
+
+//nachschauen ob noch benoetigt!!!!!
+Raw_Data writeDataToStructureArray(char *buffer);
 
 
 #endif
