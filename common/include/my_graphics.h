@@ -9,8 +9,6 @@ int my_graphics_Test();
 //Show Menu for user input
 void help();
 
-void printHelp();
-
 void printRawData(Raw_Data data);
 
 void printCleanData(Clean_Data data);

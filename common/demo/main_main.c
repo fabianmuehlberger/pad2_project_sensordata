@@ -13,6 +13,8 @@
 
 void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName);
 void readRawDataFile(char *fileName_RawData, char *fileName_CleanData);
+void printRawData(Raw_Data RawDataArray);
+void printCleanData(Clean_Data CleanDataArray);
 
 int main(void)
 {
@@ -60,9 +62,11 @@ int main(void)
             break;
         case 3:
             printf("printing RawData...\n");
+            printRawData(RawDataArray);
             break;
         case 4:
             printf("printing CleanData...\n");
+            printCleanData(CleanDataArray);
             break;
         case 5:
             printHelp();
@@ -75,12 +79,7 @@ int main(void)
             printf("choosen number not supported\n");
             break;
         }
-    }
-  
-    
-
-    //printRawData(RawDataArray);
-    //printCleanData(CleanDataArray);
+    }   
 }
 
 void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName)
@@ -116,6 +115,7 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
     fclose(fp_ReadSourceFile);
     fclose(fp_WriteRawDataFile);
     printf("\nEnd of READFILE\n");
+    printf("source -> validation -> raw -> (file generated)\n");
 }
 
 void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
@@ -143,4 +143,5 @@ void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
     fclose(fp_ReadRaw);
 
     printf("END OF READ RAW DATA\n");
+    printf("raw -> conversion -> clean -> (file generated)\n");
 }
