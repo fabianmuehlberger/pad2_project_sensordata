@@ -18,10 +18,11 @@ void printCleanData(Clean_Data CleanDataArray);
 
 int main(void)
 {
-    //Declarations
+    // PLACEHOLDER
     Raw_Data RawDataArray;
     allocateMemoryForRawDataArray(&RawDataArray);
 
+    // PLACEHOLDER
     Clean_Data CleanDataArray;
     allocateMemoryForCleanDataArray(&CleanDataArray);
 
