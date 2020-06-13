@@ -53,11 +53,11 @@ int main(void)
         switch (auswahl)
         {
         case 1:
-            printf("| reading source file... |\n\n");
+            printf("\n| reading source file... |\n\n");
             readSourceFile(sourceFileName, rawFileName, errorLogFileName);
             break;
         case 2:
-            printf("| reading RawDataFile... |\n\n");
+            printf("\n| reading RawDataFile... |\n\n");
             readRawDataFile(rawFileName, cleanFileName);
             break;
         case 3:
@@ -72,11 +72,11 @@ int main(void)
             printHelp();
             break;
         case 6: 
-            printf("| END OF PROGRAM |");
+            printf("\n| END OF PROGRAM |");
             alive = 0;
             break;
         default:
-            printf("| choosen number not supported |\n");
+            printf("\n| choosen number not supported |\n");
             break;
         }
     }   
@@ -94,7 +94,7 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
     FILE *fp_WriteRawDataFile = NULL;
     fp_WriteRawDataFile = openCSVFile(rawFileName, fp_WriteRawDataFile, "w");
 
-    printf("errors in CSV file detected ->: ");
+    printf("errors in CSV file detected -> ");
 
     while (fgets(buffer, FILEBUFFER, fp_ReadSourceFile) != NULL)
     {
@@ -113,9 +113,8 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
     }
 
     fclose(fp_ReadSourceFile);
-    fclose(fp_WriteRawDataFile);
-    printf("\nEnd of READFILE\n");
-    printf("\nsource -> validation -> raw -> (file generated)\n");
+    fclose(fp_WriteRawDataFile);;
+    printf("\nsource Data -> Data validation -> raw Data -> (raw_data.csv generated)\n");
 }
 
 void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
@@ -141,7 +140,5 @@ void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
         lines++;
     }
     fclose(fp_ReadRaw);
-
-    printf("END OF READ RAW DATA\n");
-    printf("\nraw -> conversion -> clean -> (file generated)\n");
+    printf("\nraw Data -> Data conversion -> Clean -> (clean_data.csv generated)\n");
 }
