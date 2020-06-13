@@ -90,21 +90,17 @@ Die Codebase wurde als CMAKE Projekt komzipiert und aufgebaut. Hierzu wurde ein 
 
 ### Header Files:
 
-[my_file_io.h](../common/include/my_file_io.h)  
+[my_file_io.h](../common/include/my_file_io.h)
 Funktionen zum einlesen und Verarbeten der csv Sensordaten  
 
-[my_validation.h](../common/include/my_validation.h)  
+[my_validation.h](../common/include/my_validation.h)
 Check der Zeilen der Daten auf Vollständigkeit
  
+[my_graphics.h](../common/include/my_graphics.h) Ausgabe und darstellung der Daten auf der Konsole
 
-[my_graphics.h](../common/include/my_graphics.h)  
-Ausgabe und darstellung der Daten auf der Konsole
+[my_helpers.h](../common/include/my_graphics.h) Hilfreiche standard Funktionalitäten
 
-[my_helpers.h](../common/include/my_graphics.h)  
-Hilfreiche standard Funktionalitäten
-
-[my_structure.h](../common/include/my_graphics.h)  
-Datenstrukuren für Rohdaten und Ausgewertete Daten 
+[my_structure.h](../common/include/my_graphics.h) Datenstrukuren für Rohdaten und Ausgewertete Daten 
 
 ### Source Files:
 [my_file_io.c](../common/src/my_file_io.c)
