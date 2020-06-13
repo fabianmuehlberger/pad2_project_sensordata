@@ -25,6 +25,6 @@ void changeAccAxis(Clean_Data *tmp);
 
 Clean_Data convertRawToClean(Raw_Data rawData);
 
-
+void printHelp();
 
 #endif
