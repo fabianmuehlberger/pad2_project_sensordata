@@ -4,7 +4,25 @@
 
 **Github repo:** https://github.com/fabianmuehlberger/pad2_project_sensordata
 
-**Dokument stand:** 19.05.2020
+**Dokument stand:** 13.06.2020
+
+
+TABLE OF CONTENTS:
+  - [Projektteilnehmer:](#projektteilnehmer)
+  - [Hardware:](#hardware)
+  - [Projekt Ziel:](#projekt-ziel)
+  - [Tests:](#tests)
+  - [Error Handling:](#error-handling)
+    - [Header Files:](#header-files)
+    - [Source Files:](#source-files)
+  - [Rohdaten:](#rohdaten)
+  - [Strategie:](#strategie)
+      - [File Lesen:](#file-lesen)
+  - [Aufwandsabschätzung:](#aufwandsabschätzung)
+  - [Externe Libraries:](#externe-libraries)
+  - [Projektmanagement](#projektmanagement)
+  - [Code Conventions:](#code-conventions)
+  - [Projekt Struktur](#projekt-struktur)
 
 ## Projektteilnehmer:
 
@@ -23,13 +41,43 @@ LSM9DS1 - iNEMO inertial module:
 ## Projekt Ziel:
 Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Datei liest und diese daten auswertet. Es soll mithilfe der Daten ein Bewegungsprofil erstellt werden. Die daten sollen per Konsolen befehl ausgegeben werden können und auch visualisiert werden. 
 
-## Tests:
+## Strategie:
+
+### File Lesen:
+* Daten werden aus dem source.csv File geladen und durchlaufen Tests. 
+* Die Daten werden in raw_data.csv gespeichert. Es wird eine Zeilennummer und ein Hinweis auf eventuelle Fehler hinzugefügt.
+* aus raw_data.csv werden die daten erneut gelanden und verarbeitet
+  * umwandlung von Hex in Dec
+  * Verrechnung der Datensaetze um eine hoehere genauigkeit zu erreichen.
+ 
+
+### Tests:
 
 [test_main](../build/bin/test_main.exe)   
-  * zeigt alle Source Files im Projekt. 
-  * Überprüfung der Lese und Schreibe Funktionen mithilfe eines Testfiles
+* zeigt alle Source Files im Projekt. 
+* Überprüfung der Lese und Schreibe Funktionen mithilfe eines Testfiles
+* Es werden folgende Tests durchgeführt:
+  * Überprüfung auf ```\n``` jedes Zeilenendes
+  * Anzahld der Seperationstokens ```;``` 
 
-## Libraries:
+### Error Handling:
+Schreiben eines error_log.csv Files:
+
+Zeilennummer | Fehlercode | Fehlertext
+---------|----------|---------
+ 5 | 1 | Fehlender Seperationstoken
+
+* *aus zeitmangel wurden keine sinnbringenden Test geschrieben*
+
+  
+## Projekmanagement:
+
+### Strategie
+
+
+
+## Externe Libraries:
+* Die umrechnung der daten wurde von [ozzmaker](http://ozzmaker.com/) übernommen, umgeschrieben und für unsere zwaeke veraendert.
 
 ### Header Files:
 
@@ -38,9 +86,7 @@ Funktionen zum einlesen und Verarbeten der csv Sensordaten
 
 [my_validation.h](../common/include/my_validation.h)  
 Check der Zeilen der Daten auf Vollständigkeit
-  * Überprüfung auf ```\n``` jedes Zeilenendes
-  * Anzahld der Seperationstokens ```;``` 
-  * Überprüfung der Werte auf Plausibilität
+ 
 
 [my_graphics.h](../common/include/my_graphics.h)  
 Ausgabe und darstellung der Daten auf der Konsole
@@ -49,7 +95,7 @@ Ausgabe und darstellung der Daten auf der Konsole
 Hilfreiche standard Funktionalitäten
 
 [my_structure.h](../common/include/my_graphics.h)  
-Datenstrukuren 
+Datenstrukuren für Rohdaten und Ausgewertete Daten 
 
 ### Source Files:
 [my_file_io.c](../common/src/my_file_io.c)
@@ -66,19 +112,6 @@ Datenstrukuren
 [Data_sheet](../ressources/datasheet_LSM9DS1.pdf) Datenblatt des LSM9DS1
 
 [test_data](../ressources/Test_Data_20k_IMU-LSM9DS1.csv) CSV Rohdaten 
-
-## Strategie:
-
-#### File Lesen:
-
-## Aufwandsabschätzung:
-
-
-
-
-## Projektmanagement
-
-Projektfortschritt ist im Dokument [project_update](../documentation/project_update.md) nachzulesen
 
 
 ## Code Conventions:
