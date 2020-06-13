@@ -125,6 +125,7 @@ int lineValidatonChecks(char *lineToValidate, int line, char *errorLogFileName)
 {
     int checker = 0;
     char csv_token[] = ";";
+    printf("errors occured:\n");
     
     //check tokens
     if (checkLineToken(lineToValidate))
