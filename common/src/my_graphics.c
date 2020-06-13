@@ -14,14 +14,6 @@ void help()
     printf("-3- Option three\n");
 }
 
-void printHelp()
-{
-    printf("\nHauptmenu: (Auswahl treffen)\n"
-           "p: Messpunkte printen\n"
-           "h: Hauptmenu\n"
-           "e: exit\n");
-}
-
 void printRawData(Raw_Data data)
 {
     printf("Acc: %i %i %i  | Gyro: %i %i %i  | Magn: %i %i %i\n",
