@@ -16,7 +16,7 @@
 #define _CTRL_REG3_M 0b00000000
 #define _CTRL_REG4_M 0b00000000
 
-
+// Sensor Settings
 #define DT 0.02 // [s/loop] loop period. 20ms
 #define AA 0.97 // complementary filter constant
 

@@ -4,7 +4,7 @@
 #include "my_structure.h"
 #include "my_validation.h"
 
-/* !! Check ob notwendig */
+// Nur notwendig wenn Berechnungen mit den Daten gemacht werden 
 /*
 void createArray(Data *dataArray, int lineCount)
 {
