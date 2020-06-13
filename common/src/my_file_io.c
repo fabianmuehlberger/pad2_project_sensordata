@@ -75,9 +75,6 @@ Raw_Data readRawDataFromCSV(char *buffer)
 
 void writeToCleanDataCSV(Clean_Data tmp, char *FileName_CleanData)
 {
-    /*
-    pClean = fopen(FileName_CleanData, "a+");
-    */
     FILE *pClean = NULL;
     if (pClean = openCSVFile(FileName_CleanData, pClean, "a"))
     {
@@ -90,12 +87,5 @@ void writeToCleanDataCSV(Clean_Data tmp, char *FileName_CleanData)
                 tmp.CFangleX,
                 tmp.CFangleY);
     }
-    
-/*
-    if (pClean == NULL)
-    {
-        printf("COULD NOT OPEN FILE!\n");
-    }
-*/
     fclose(pClean);
 }

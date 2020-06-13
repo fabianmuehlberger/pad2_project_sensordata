@@ -23,6 +23,8 @@ typedef struct Raw_Data
 
 } Raw_Data;
 
+
+// Datastruture for converted Data 
 typedef struct Clean_Data
 {
     float gyroXangle;

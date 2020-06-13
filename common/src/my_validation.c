@@ -12,7 +12,6 @@ int my_validation_Test()
 int checkLineCount(char *name)
 {
     int lineCount = 0;
-    //FILE *tmp = fopen(name, "r");
 
     FILE *tmp = NULL;
     tmp = openCSVFile(name, tmp, "r");
@@ -40,10 +39,6 @@ int checkFileSize(char *name)
 
     tmp = openCSVFile(name, tmp, "r");
 
-    //= fopen(name, "r");
-
-
-
     fseek(tmp, 0L, SEEK_END);
     fileSize = ftell(tmp);
 
@@ -53,6 +48,8 @@ int checkFileSize(char *name)
 }
 
 //checks current directory, might be usefull to find files
+// Nur notwendig wenn die benutzereingabe das durchsuchen der Ordnerstruktur vorsieht
+/*
 void checkDirectory()
 {
     struct dirent *de;
@@ -69,6 +66,7 @@ void checkDirectory()
     }
     closedir(pDir);
 }
+*/
 
 int checkLineToken(char *fileLine)
 {
@@ -115,15 +113,7 @@ void writeErrorLog(char *errorLogFileName, int line, int errorCode, char *errorM
 {
     FILE *pWriteError = NULL;
     pWriteError = openCSVFile(errorLogFileName, pWriteError, "a" );
-    /*
-    pWriteError = fopen(errorLogFileName, "a");
-    if (pWriteError == NULL)
-    {
-        printf("ERROR could not open error log");
-        exit(-1);
-    }
-    */
-    
+
     fprintf(pWriteError, "LINE: %d  ERROR: %d  %s\n", line, errorCode, errorMassage);
 
     printf("Line %d written to errorlog", line);
@@ -135,6 +125,7 @@ int lineValidatonChecks(char *lineToValidate, int line, char *errorLogFileName)
 {
     int checker = 0;
     char csv_token[] = ";";
+    
     //check tokens
     if (checkLineToken(lineToValidate))
     {
