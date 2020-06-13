@@ -36,9 +36,40 @@ int main(void)
     char cleanFileName[NAMELEN] = "..\\..\\ressources\\clean_data.csv";
     char errorLogFileName[NAMELEN] = "..\\..\\ressources\\error_log.csv";
 
-    readSourceFile(sourceFileName, rawFileName, errorLogFileName);
+    //variable to keep the main while loop going
+    int alive = 1;
 
-    readRawDataFile(rawFileName, cleanFileName);
+    while (alive != 0)
+    {
+        printf("_____WELCOME_____\n");
+        printf("enter number to choose option: ");
+    
+        int auswahl = 0;
+        scanf("%d", &auswahl);
+        
+        switch (auswahl)
+        {
+        case 1:
+            printf("reading source file...\n");
+            readSourceFile(sourceFileName, rawFileName, errorLogFileName);
+            break;
+        case 2:
+            printf("Option two\n");
+            readRawDataFile(rawFileName, cleanFileName);
+            break;
+        case 3:
+            printf("Option three\n");
+            printf("show help\n");
+        case 4:
+            printf("Option 4 \n");
+            break;
+        default:
+            printf("choosen number not supported\n");
+            break;
+        }
+    }
+  
+    
 
     //printRawData(RawDataArray);
     //printCleanData(CleanDataArray);
