@@ -8,7 +8,6 @@
 #include "my_helpers.h"
 #include "my_validation.h"
 
-
 #define NAMELEN 80
 #define FILEBUFFER 256
 
@@ -25,20 +24,19 @@ int main(void)
     Clean_Data CleanDataArray;
     allocateMemoryForCleanDataArray(&CleanDataArray);
 
-/*
-    char sourceFileName[NAMELEN] = ".\\tmp\\source_data.csv";
-    char rawFileName[NAMELEN] = ".\\tmp\\raw_data.csv";
-    char cleanFileName[NAMELEN] = ".\\tmp\\clean_data.csv";
-    char errorLogFileName[NAMELEN] = ".\\tmp\\error_log.csv";
+    /*
+    char sourceFileName[NAMELEN] = ".\\ressources\\source_data.csv";
+    char rawFileName[NAMELEN] = ".\\ressources\\raw_data.csv";
+    char cleanFileName[NAMELEN] = ".\\ressources\\clean_data.csv";
+    char errorLogFileName[NAMELEN] = ".\\ressources\\error_log.csv";
 */
 
-    char sourceFileName[NAMELEN] = "..\\..\\tmp\\source_data.csv";
-    char rawFileName[NAMELEN] = "..\\..\\tmp\\raw_data.csv";
-    char cleanFileName[NAMELEN] = "..\\..\\tmp\\clean_data.csv";
-    char errorLogFileName[NAMELEN] = "..\\..\\tmp\\error_log.csv";
+    char sourceFileName[NAMELEN] = "..\\..\\ressources\\source_data.csv";
+    char rawFileName[NAMELEN] = "..\\..\\ressources\\raw_data.csv";
+    char cleanFileName[NAMELEN] = "..\\..\\ressources\\clean_data.csv";
+    char errorLogFileName[NAMELEN] = "..\\..\\ressources\\error_log.csv";
 
     readSourceFile(sourceFileName, rawFileName, errorLogFileName);
-    
 
     readRawDataFile(rawFileName, cleanFileName);
 
@@ -60,12 +58,12 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
 
     while (fgets(buffer, FILEBUFFER, fp_ReadSourceFile) != NULL)
     {
-        
+
         if (lineValidatonChecks(buffer, lines, errorFileName))
         {
             validationcheck = 1;
         }
-        
+
         removeNewLineFromString(buffer);
 
         fprintf(fp_WriteRawDataFile, "%d;%d;%s\n", lines, validationcheck, buffer);
