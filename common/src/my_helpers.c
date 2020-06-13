@@ -142,4 +142,14 @@ Clean_Data convertRawToClean(Raw_Data rawData)
     return tmpData;
 }
 
+void printHelp()
+{
+    printf("\n1: Read SourceData File\n"
+           "2: Read RawData File\n"
+           "3: printing RawData\n"
+           "4: printing CleanData\n"
+           "5: help\n"
+           "6: EXIT\n");
+}
+
 

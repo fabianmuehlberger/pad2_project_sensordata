@@ -16,14 +16,14 @@ void readRawDataFile(char *fileName_RawData, char *fileName_CleanData);
 
 int main(void)
 {
-    printf("Start of main\n");
-
+    //Declarations
     Raw_Data RawDataArray;
     allocateMemoryForRawDataArray(&RawDataArray);
 
     Clean_Data CleanDataArray;
     allocateMemoryForCleanDataArray(&CleanDataArray);
 
+    //Path regulator
     /*
     char sourceFileName[NAMELEN] = ".\\ressources\\source_data.csv";
     char rawFileName[NAMELEN] = ".\\ressources\\raw_data.csv";
@@ -36,32 +36,40 @@ int main(void)
     char cleanFileName[NAMELEN] = "..\\..\\ressources\\clean_data.csv";
     char errorLogFileName[NAMELEN] = "..\\..\\ressources\\error_log.csv";
 
-    //variable to keep the main while loop going
-    int alive = 1;
+    
+    int alive = 1; //keeps the main while loop alive
+    printf("_____WELCOME_____\n");
+    printHelp(); 
 
     while (alive != 0)
     {
-        printf("_____WELCOME_____\n");
-        printf("enter number to choose option: ");
-    
+        printf("\nenter a number to choose option: ");
+
         int auswahl = 0;
         scanf("%d", &auswahl);
         
         switch (auswahl)
         {
         case 1:
-            printf("reading source file...\n");
+            printf("reading source file...\n\n");
             readSourceFile(sourceFileName, rawFileName, errorLogFileName);
             break;
         case 2:
-            printf("Option two\n");
+            printf("reading RawDataFile...\n\n");
             readRawDataFile(rawFileName, cleanFileName);
             break;
         case 3:
-            printf("Option three\n");
-            printf("show help\n");
+            printf("printing RawData...\n");
+            break;
         case 4:
-            printf("Option 4 \n");
+            printf("printing CleanData...\n");
+            break;
+        case 5:
+            printHelp();
+            break;
+        case 6: 
+            printf("END OF PROGRAM");
+            alive = 0;
             break;
         default:
             printf("choosen number not supported\n");
@@ -86,6 +94,8 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
 
     FILE *fp_WriteRawDataFile = NULL;
     fp_WriteRawDataFile = openCSVFile(rawFileName, fp_WriteRawDataFile, "w");
+
+    printf("errors occured:\n");
 
     while (fgets(buffer, FILEBUFFER, fp_ReadSourceFile) != NULL)
     {
