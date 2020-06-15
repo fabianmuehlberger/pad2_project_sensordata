@@ -78,6 +78,7 @@ int main(void)
             break;
         default:
             printf("\n| choosen number not supported |\n");
+            auswahl = 0;
         }
     }   
 }
