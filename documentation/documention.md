@@ -4,23 +4,22 @@
 
 **Github repo:** https://github.com/fabianmuehlberger/pad2_project_sensordata
 
-**Dokument stand:** 13.06.2020
+**Dokument stand:** 15.06.2020
 
-
-TABLE OF CONTENTS:
+- [Themenkreis 1: Auswertung von Sensor-Rohdaten.](#themenkreis-1-auswertung-von-sensor-rohdaten)
   - [Projektteilnehmer:](#projektteilnehmer)
   - [Hardware:](#hardware)
   - [Projekt Ziel:](#projekt-ziel)
-  - [Tests:](#tests)
-  - [Error Handling:](#error-handling)
+  - [Projekmanagement:](#projekmanagement)
+    - [Milesstones:](#milesstones)
+    - [Erreichte Milestones:](#erreichte-milestones)
+    - [File Lesen:](#file-lesen)
+    - [Error Handling:](#error-handling)
+  - [Externe Libraries/ Datenstrukturen:](#externe-libraries-datenstrukturen)
+  - [Compilieren und Ausführen:](#compilieren-und-ausführen)
     - [Header Files:](#header-files)
     - [Source Files:](#source-files)
   - [Rohdaten:](#rohdaten)
-  - [Strategie:](#strategie)
-      - [File Lesen:](#file-lesen)
-  - [Aufwandsabschätzung:](#aufwandsabschätzung)
-  - [Externe Libraries:](#externe-libraries)
-  - [Projektmanagement](#projektmanagement)
   - [Code Conventions:](#code-conventions)
   - [Projekt Struktur](#projekt-struktur)
 
