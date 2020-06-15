@@ -37,7 +37,7 @@ LSM9DS1 - iNEMO inertial module:
 * 3D magnetometer
 
 ## Projekt Ziel:
-Ziel ist eine Konsolen Aplikaton, die Sensordaten des Senshats, aus einer CSV Datei liest und diese daten auswertet. Es soll mithilfe der Daten ein Bewegungsprofil erstellt werden. Die daten sollen per Konsolen befehl ausgegeben werden können und auch visualisiert werden. 
+Ziel ist eine Konsolen Applikaton, die Sensordaten des Senshats, aus einer CSV Datei liest und diese daten auswertet. Es soll mithilfe der Daten ein Bewegungsprofil erstellt werden. Die daten sollen per Konsolen befehl ausgegeben werden können und auch visualisiert werden. 
 
 ## Projekmanagement:
 
@@ -82,12 +82,12 @@ Zeilennummer | Fehlercode | Fehlertext
 Es werden folgende Tests durchgeführt:
 * Überprüfung auf ```\n``` jedes Zeilenendes
 * Anzahld der Seperationstokens ```;``` 
-* *aus zeitmangel wurden keine sinnbringenden Test geschrieben*
+* *Dem Unverständnis der Daten geschuldet, wurden keine sinnbringenden Test geschrieben*
 
 
 ## Externe Libraries/ Datenstrukturen:
-* Die umrechnung der daten wurde von [ozzmaker](http://ozzmaker.com/) übernommen, umgeschrieben und für unsere zwaeke veraendert.
-* Die Grundlegende Projektstruktur wurde von Hr. Bader zur verfügung gestellt. 
+* Die umrechnung der Daten wurde von [ozzmaker](http://ozzmaker.com/) uebernommen, umgeschrieben und für unsere Zwecke veraendert.
+* Die Grundlegende Projektstruktur wurde von Hr. Bader zur verfuegung gestellt. 
 
 ## Compilieren und Ausführen:
 1. Git Repository Clonen oder Downloaden
@@ -101,12 +101,12 @@ Es werden folgende Tests durchgeführt:
 ### Header Files:
 
 [my_file_io.h](../common/include/my_file_io.h)
-Funktionen zum einlesen und Verarbeten der csv Sensordaten  
+Funktionen zum einlesen und Verarbeiten der csv Sensordaten  
 
 [my_validation.h](../common/include/my_validation.h)
 Check der Zeilen der Daten auf Vollständigkeit
  
-[my_graphics.h](../common/include/my_graphics.h) Ausgabe und darstellung der Daten auf der Konsole
+[my_graphics.h](../common/include/my_graphics.h) Ausgabe und Darstellung der Daten auf der Konsole
 
 [my_helpers.h](../common/include/my_graphics.h) Hilfreiche standard Funktionalitäten
 
