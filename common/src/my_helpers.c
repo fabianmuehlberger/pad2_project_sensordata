@@ -156,5 +156,7 @@ void loadingBar(int lines)
     if(lines==20000|lines==17500|lines==15000|lines==13500|lines==12000|lines==10000|lines==7500|lines==5000|lines==3500|lines==2500|lines==1000|lines==500|lines==250)
         {
             printf(".");
+            if(lines==19995)
+            printf("\a");
         }
 }
