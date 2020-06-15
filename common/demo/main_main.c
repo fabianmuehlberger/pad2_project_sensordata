@@ -34,7 +34,7 @@ int main(void)
     char errorLogFileName[NAMELEN] = ".\\ressources\\error_log.csv";
 */
 
-    char sourceFileName[NAMELEN] = "..\\..\\ressources\\source_data.csv";
+    char sourceFileName[NAMELEN] = "..\\..\\ressources\\test_data.csv";    // <- realfile/ testfile:   "\\source_data.csv"
     char rawFileName[NAMELEN] = "..\\..\\ressources\\raw_data.csv";
     char cleanFileName[NAMELEN] = "..\\..\\ressources\\clean_data.csv";
     char errorLogFileName[NAMELEN] = "..\\..\\ressources\\error_log.csv";
