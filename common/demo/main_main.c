@@ -120,8 +120,8 @@ void readSourceFile(char *sourceFileName, char *rawFileName, char *errorFileName
 
 void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
 {
-    printf("Reading RawData:....\n");
-
+    printf("Reading RawData:..");
+    
     FILE *fp_ReadRaw = NULL;
     fp_ReadRaw = openCSVFile(fileName_RawData, fp_ReadRaw, "r");
 
@@ -139,7 +139,8 @@ void readRawDataFile(char *fileName_RawData, char *fileName_CleanData)
 
         writeToCleanDataCSV(tmp_CleanData, fileName_CleanData);
         lines++;
+        loadingBar(lines);
     }
     fclose(fp_ReadRaw);
-    printf("\nraw Data -> Data conversion -> Clean -> (clean_data.csv generated)\n");
+    printf("\n\nraw Data -> Data conversion -> Clean -> (clean_data.csv generated)\n");
 }

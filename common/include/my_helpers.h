@@ -27,4 +27,6 @@ Clean_Data convertRawToClean(Raw_Data rawData);
 
 void printHelp();
 
+void loadingBar(int lines);
+
 #endif
