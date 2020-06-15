@@ -6,7 +6,6 @@
 
 **Dokument stand:** 15.06.2020
 
-- [Themenkreis 1: Auswertung von Sensor-Rohdaten.](#themenkreis-1-auswertung-von-sensor-rohdaten)
   - [Projektteilnehmer:](#projektteilnehmer)
   - [Hardware:](#hardware)
   - [Projekt Ziel:](#projekt-ziel)
