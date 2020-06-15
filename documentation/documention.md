@@ -80,10 +80,9 @@ Zeilennummer | Fehlercode | Fehlertext
 ---------|----------|---------
  5 | 1 | Fehlender Seperationstoken
 
- Es werden folgende Tests durchgeführt:
-  * Überprüfung auf ```\n``` jedes Zeilenendes
-  * Anzahld der Seperationstokens ```;``` 
-
+Es werden folgende Tests durchgeführt:
+* Überprüfung auf ```\n``` jedes Zeilenendes
+* Anzahld der Seperationstokens ```;``` 
 * *aus zeitmangel wurden keine sinnbringenden Test geschrieben*
 
 
